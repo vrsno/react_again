@@ -1,33 +1,43 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { TwiterFollowCard } from "./TwiterFollowcard";
+import image from "./assets/angelo.jpeg";
+import image2 from "./assets/gato.jpeg";
+import image3 from "./assets/cubo.jpeg";
+import image4 from "./assets/joven.jpeg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const formatUserName = (userName) => `@${userName}`;
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <section className="App">
+      <TwiterFollowCard
+        formatUserName={formatUserName}
+        userName="angelito"
+        name="Angel Dorma"
+        image={image}
+      />
+      <TwiterFollowCard
+        formatUserName={formatUserName}
+        isFollowing={false}
+        userName="Miaui"
+        name="Mia Sirnú"
+        image={image2}
+      />
+      <TwiterFollowCard
+        formatUserName={formatUserName}
+        isFollowing
+        userName="rubix"
+        name="cubik rubix"
+        image={image3}
+      />
+      <TwiterFollowCard
+        formatUserName={formatUserName}
+        isFollowing
+        userName="username"
+        name="Angelinho ribunho"
+        image={image4}
+      />
+    </section>
   );
 }
 
