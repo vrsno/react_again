@@ -18,7 +18,6 @@ function App() {
       </TwiterFollowCard>
       <TwiterFollowCard
         formatUserName={formatUserName}
-        isFollowing={false}
         userName="Miaui"
         image={image2}
       >
