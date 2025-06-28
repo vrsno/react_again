@@ -10,6 +10,7 @@ function App() {
   return (
     <section className="App">
       <TwiterFollowCard
+        initialIsFollowiing={true}
         formatUserName={formatUserName}
         userName="angelito"
         image={image}
